@@ -25,7 +25,7 @@ export function Footer() {
                         <a href="https://www.youtube.com/channel/UCT_cK6srIOrB8-TqjZxpCXg/about"  target="_blank"><img src={Youtube} alt="youtube"/></a>
                     </div>
                     <div className="Icon">
-                        <a href="https://instagram.com/svce_indore__shoutout?igshid=MzRlODBiNWFlZA=="  target="_blank"><img src={Instagram} alt="instagram"/></a>
+                        <a href="https://instagram.com/taarunyam2023?utm_source=qr&igshid=OGU0MmVlOWVjOQ=="  target="_blank"><img src={Instagram} alt="instagram"/></a>
                     </div>
                     </div>
                 </div>

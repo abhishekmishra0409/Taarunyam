@@ -43,7 +43,7 @@ export function PopupCard(props) {
                                 {/*<li>{props.coordinator3}</li>*/}
                             </ul>
                             <div className="RegisterBtn">
-                                <div className="RegisButn"><a href={props.register} >Register Here</a></div>
+                                <div className="RegisButn"><a href={props.register} target={'_blank'} >Register Here</a></div>
                             </div>
                         </div>
                         <button className="close-modal" onClick={toggleModal}>

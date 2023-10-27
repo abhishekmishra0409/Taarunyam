@@ -3,12 +3,15 @@ import 'reactjs-popup/dist/index.css';
 import {PopupCard} from "./PopupCard.jsx";
 import PropTypes from 'prop-types';
 import Technical from '../assets/Technical.jpg'
-import NonTechnical from '../assets/Non technical Games.jpg'
+import NonTechnical from '../assets/NonTech.jpg'
 import FunGames from '../assets/Fun Games.jpg'
 import OneShot from '../assets/One Shot.jpg'
 import MechCivil from '../assets/Mechenical & Civil.jpg'
 import Cultural from '../assets/Cultural Fest.jpg'
 import {EventData} from '../EventsData.js'
+import CollegePhoto from '../assets/College Photography.jpg'
+import FoodFest from '../assets/Food Fest.jpg'
+import Game from '../assets/Game Event.jpg';
 function EventBanner() {
     return (
         <>
@@ -68,7 +71,7 @@ function EventBanner() {
                         {/*<h1 className={'EventHeading'}>Non-Technical Event</h1>*/}
                         <div className={'Event-content'}>
                             <div className={'EventPr'}>
-                                <img src={OneShot}/>
+                                <img src={FunGames}/>
                             </div>
                             <div className={'EventNames'}>
                                 {EventData?.filter((element) => {
@@ -85,7 +88,7 @@ function EventBanner() {
                         {/*<h1 className={'EventHeading'}>Non-Technical Event</h1>*/}
                         <div className={'Event-content'}>
                             <div className={'EventPr'}>
-                                <img src={FunGames}/>
+                                <img src={OneShot}/>
                             </div>
                             <div className={'EventNames'}>
                                 {EventData?.filter((element) => {
@@ -107,6 +110,57 @@ function EventBanner() {
                             <div className={'EventNames'}>
                                 {EventData?.filter((element) => {
                                     return element.category.includes('Cultural');
+                                }).map(element => (
+                                    <PopupCard Event = {element.name} description = {element.description} description1 = {element.description1} description2 = {element.description2} description3 = {element.description3}
+                                               entry = {element.entry} wining = {element.wining} coordinator = {element.coordinator} coordinator1 = {element.coordinator1} coordinator2 = {element.coordinator2} coordinator3 = {element.coordinator3} register = {element.register}/>
+
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                    <div className={'Event'}>
+                        {/*<h1 className={'EventHeading'}>Non-Technical Event</h1>*/}
+                        <div className={'Event-content'}>
+                            <div className={'EventPr'}>
+                                <img src={CollegePhoto}/>
+                            </div>
+                            <div className={'EventNames'}>
+                                {EventData?.filter((element) => {
+                                    return element.category.includes('photo');
+                                }).map(element => (
+                                    <PopupCard Event = {element.name} description = {element.description} description1 = {element.description1} description2 = {element.description2} description3 = {element.description3}
+                                               entry = {element.entry} wining = {element.wining} coordinator = {element.coordinator} coordinator1 = {element.coordinator1} coordinator2 = {element.coordinator2} coordinator3 = {element.coordinator3} register = {element.register}/>
+
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                    <div className={'Event'}>
+                        {/*<h1 className={'EventHeading'}>Non-Technical Event</h1>*/}
+                        <div className={'Event-content'}>
+                            <div className={'EventPr'}>
+                                <img src={FoodFest}/>
+                            </div>
+                            <div className={'EventNames'}>
+                                {EventData?.filter((element) => {
+                                    return element.category.includes('food');
+                                }).map(element => (
+                                    <PopupCard Event = {element.name} description = {element.description} description1 = {element.description1} description2 = {element.description2} description3 = {element.description3}
+                                               entry = {element.entry} wining = {element.wining} coordinator = {element.coordinator} coordinator1 = {element.coordinator1} coordinator2 = {element.coordinator2} coordinator3 = {element.coordinator3} register = {element.register}/>
+
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                    <div className={'Event'}>
+                        {/*<h1 className={'EventHeading'}>Non-Technical Event</h1>*/}
+                        <div className={'Event-content'}>
+                            <div className={'EventPr'}>
+                                <img src={Game}/>
+                            </div>
+                            <div className={'EventNames'}>
+                                {EventData?.filter((element) => {
+                                    return element.category.includes('game');
                                 }).map(element => (
                                     <PopupCard Event = {element.name} description = {element.description} description1 = {element.description1} description2 = {element.description2} description3 = {element.description3}
                                                entry = {element.entry} wining = {element.wining} coordinator = {element.coordinator} coordinator1 = {element.coordinator1} coordinator2 = {element.coordinator2} coordinator3 = {element.coordinator3} register = {element.register}/>

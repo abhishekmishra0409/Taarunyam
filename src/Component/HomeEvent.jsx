@@ -1,8 +1,8 @@
 
 import "./HomeEvent.css";
-import Technical from '../assets/Technical Event2.mp4'
-import NonTechnical from '../assets/NonTechnical Event.mp4'
-import Cultural from '../assets/Cultural Event.mp4'
+import Technical from '../assets/Technical Event2.png'
+import NonTechnical from '../assets/NonTechnical Event.png'
+import Cultural from '../assets/Cultural Event.png'
 import { useRef,useEffect } from "react";
 import {
     motion,
@@ -41,11 +41,7 @@ function Image( id ,EventName ) {
         <section className={'HomeEvent'}>
             <div ref={ref}>
                 <a href={'/Events'}>
-                    <video className={'EventImg'}
-                           autoPlay loop
-                           muted>
-                        <source src={id} type="video/mp4"/>
-                    </video>
+                    <img className={'EventImg'} src={id} alt={EventName}/>
                 </a>
             </div>
             <motion.h2 className={'EventName'} style={{ y }}>{EventName}</motion.h2>
@@ -59,7 +55,7 @@ export default function HomeEvent() {
         <>
             <div className={'HomeEventBanner'}></div>
             {Image(Technical, 'Technical Event')}
-            {Image(NonTechnical, 'NonTechnical Event')}
+            {Image(NonTechnical, 'Fun Games')}
             {Image(Cultural, 'Cultural Fest')}
         </>
     );
